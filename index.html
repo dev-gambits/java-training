@@ -1,0 +1,2080 @@
+<!doctype html>
+<html data-n-head-ssr>
+
+<head>
+    <title> JPA Buddy - IntelliJ IDEA plugin supporting Hibernate, EclipseLink, SpringData, Liquibase, Flyway and other JPA related tech</title>
+    <meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1">
+    <meta data-n-head="ssr" charset="utf-8">
+    <meta data-n-head="ssr" data-hid="description" name="description" content="JPA Buddy is an advanced plugin for IntelliJ IDEA intended to simplify and accelerate everything related to JPA and surrounding mainstream technology">
+    <meta data-n-head="ssr" data-hid="keywords" name="keywords" content="data model, Java, application, Kotlin">
+    <link data-n-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Open+Sans:wght@700&display=swap">
+    <script data-n-head="ssr" src="https://platform.twitter.com/widgets.js" async></script>
+    <link rel="preload" href="/_nuxt/75e234b.js" as="script">
+    <link rel="preload" href="/_nuxt/a458a15.js" as="script">
+    <link rel="preload" href="/_nuxt/f2bd8ad.js" as="script">
+    <link rel="preload" href="/_nuxt/7e74558.js" as="script">
+    <link rel="preload" href="/_nuxt/4b7c7ea.js" as="script">
+    <style data-vue-ssr-id="4f857918:0 3749275e:0 019e1cef:0 2c4a4740:0 c2a3db48:0 a4a814d2:0 93b79f0c:0 ac2db274:0 ed7f0daa:0 c5178674:0 3426b18c:0 4445ab46:0 b51eff1e:0 a29016b2:0 9d3ed650:0 785d4022:0">
+        html {
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%
+        }
+        
+        body {
+            margin: 0
+        }
+        
+        main {
+            display: block
+        }
+        
+        h1 {
+            font-size: 2em;
+            margin: .67em 0
+        }
+        
+        hr {
+            box-sizing: content-box;
+            height: 0;
+            overflow: visible
+        }
+        
+        pre {
+            font-family: monospace, monospace;
+            font-size: 1em
+        }
+        
+        a {
+            background-color: transparent
+        }
+        
+        abbr[title] {
+            border-bottom: none;
+            text-decoration: underline;
+            -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted
+        }
+        
+        b,
+        strong {
+            font-weight: bolder
+        }
+        
+        code,
+        kbd,
+        samp {
+            font-family: monospace, monospace;
+            font-size: 1em
+        }
+        
+        small {
+            font-size: 80%
+        }
+        
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline
+        }
+        
+        sub {
+            bottom: -.25em
+        }
+        
+        sup {
+            top: -.5em
+        }
+        
+        img {
+            border-style: none
+        }
+        
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            font-family: inherit;
+            font-size: 100%;
+            line-height: 1.15;
+            margin: 0
+        }
+        
+        button,
+        input {
+            overflow: visible
+        }
+        
+        button,
+        select {
+            text-transform: none
+        }
+        
+        [type=button],
+        [type=reset],
+        [type=submit],
+        button {
+            -webkit-appearance: button
+        }
+        
+        [type=button]::-moz-focus-inner,
+        [type=reset]::-moz-focus-inner,
+        [type=submit]::-moz-focus-inner,
+        button::-moz-focus-inner {
+            border-style: none;
+            padding: 0
+        }
+        
+        [type=button]:-moz-focusring,
+        [type=reset]:-moz-focusring,
+        [type=submit]:-moz-focusring,
+        button:-moz-focusring {
+            outline: 1px dotted ButtonText
+        }
+        
+        fieldset {
+            padding: .35em .75em .625em
+        }
+        
+        legend {
+            box-sizing: border-box;
+            color: inherit;
+            display: table;
+            max-width: 100%;
+            padding: 0;
+            white-space: normal
+        }
+        
+        progress {
+            vertical-align: baseline
+        }
+        
+        textarea {
+            overflow: auto
+        }
+        
+        [type=checkbox],
+        [type=radio] {
+            box-sizing: border-box;
+            padding: 0
+        }
+        
+        [type=number]::-webkit-inner-spin-button,
+        [type=number]::-webkit-outer-spin-button {
+            height: auto
+        }
+        
+        [type=search] {
+            -webkit-appearance: textfield;
+            outline-offset: -2px
+        }
+        
+        [type=search]::-webkit-search-decoration {
+            -webkit-appearance: none
+        }
+        
+         ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            font: inherit
+        }
+        
+        details {
+            display: block
+        }
+        
+        summary {
+            display: list-item
+        }
+        
+        [hidden],
+        template {
+            display: none
+        }
+        
+        .form .vs__dropdown-toggle {
+            border: 0;
+            border-bottom: 1px solid #362f8a;
+            border-radius: 0
+        }
+        
+        .form .v-select.error .vs__dropdown-toggle {
+            border-color: #e74c3c
+        }
+        
+        .form .v-select__toggle {
+            width: 16px;
+            height: 8px;
+            background: url(/images/carret-down.svg) 50% no-repeat
+        }
+        
+        .form .vs__search {
+            color: #362f8a
+        }
+        
+        .form .vs__search,
+        .form .vs__search:focus {
+            padding: 10px 0;
+            font-size: 20px
+        }
+        
+        .form .vs__search:-ms-input-placeholder {
+            color: rgba(54, 47, 138, .5)
+        }
+        
+        .form .vs__search::placeholder {
+            color: rgba(54, 47, 138, .5)
+        }
+        
+        .form .vs__dropdown-option {
+            padding-right: 20px;
+            padding-left: 20px;
+            color: #362f8a;
+            font-size: 20px;
+            line-height: 50px
+        }
+        
+        .form .vs__dropdown-option--highlight {
+            color: #362f8a;
+            background: #e8eaf6
+        }
+        
+        .form .vs__dropdown-menu {
+            padding-top: 0;
+            padding-bottom: 0;
+            border-radius: 20px
+        }
+        
+        .form .vs__selected {
+            margin-left: 0;
+            padding-left: 0;
+            color: #362f8a;
+            font-size: 20px
+        }
+        
+        .form .vs--open.vs--single .vs__selected {
+            margin-top: 14px
+        }
+        
+        a,
+        h1,
+        h2,
+        h3,
+        strong {
+            color: #362f8a
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: Open Sans, sans-serif
+        }
+        
+        h1 {
+            font-size: 29px
+        }
+        
+        h2,
+        h3 {
+            margin-top: 2em;
+            font-size: 19px
+        }
+        
+        .responsive-table {
+            width: 100%;
+            overflow-y: hidden;
+            overflow-x: auto
+        }
+        
+        .nuxt-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            width: 0;
+            opacity: 1;
+            transition: width .1s, opacity .4s;
+            background-color: #000;
+            z-index: 999999
+        }
+        
+        .nuxt-progress.nuxt-progress-notransition {
+            transition: none
+        }
+        
+        .nuxt-progress-failed {
+            background-color: red
+        }
+        
+        .content[data-v-13f786b3] {
+            max-width: 1292px;
+            margin: 0 auto;
+            padding-right: 15px;
+            padding-left: 15px
+        }
+        
+        @media(max-width:768px) {
+            .content[data-v-13f786b3] {
+                max-width: 100vw;
+                box-sizing: border-box
+            }
+        }
+        
+        .app[data-v-13f786b3] {
+            font-size: 19px
+        }
+        
+        .first-screen[data-v-13f786b3] {
+            display: grid;
+            grid-template-rows: minmax(100px, auto) 2fr;
+            background: #fff;
+            background: url(/images/first-screen_bg-icons.svg) 50%, linear-gradient(120deg, #fff, #fff calc(49.8% + 100px), #e8eaf6 calc(50% + 100px), #e8eaf6)
+        }
+        
+        @media(max-width:1000px) {
+            .first-screen[data-v-13f786b3] {
+                background-position: 100%;
+                background-size: auto 100%
+            }
+        }
+        
+        @media(max-width:768px) {
+            .first-screen[data-v-13f786b3] {
+                grid-template-rows: 1fr;
+                background: #fff
+            }
+        }
+        
+        .headline[data-v-13f786b3] {
+            margin-top: 0;
+            color: #362f8a;
+            font-weight: 700;
+            font-size: 42px;
+            line-height: 120%;
+            margin-bottom: 20px
+        }
+        
+        @media(max-width:1280px) {
+            .headline[data-v-13f786b3] {
+                font-size: 42px
+            }
+        }
+        
+        @media(max-width:1023px) {
+            .headline[data-v-13f786b3] {
+                font-size: 36px
+            }
+        }
+        
+        @media(max-width:768px) {
+            .headline[data-v-13f786b3] {
+                font-size: 32px
+            }
+        }
+        
+        @media(max-width:480px) {
+            .headline[data-v-13f786b3] {
+                font-size: 28px
+            }
+        }
+        
+        .content[data-v-13f786b3] {
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-columns: 1fr 15px 1fr;
+            grid-template-columns: 1fr 1fr;
+            padding-bottom: 30px;
+            vertical-align: bottom
+        }
+        
+        @media(max-width:768px) {
+            .content[data-v-13f786b3] {
+                grid-template-columns: 1fr
+            }
+        }
+        
+        @media(max-width:480px) {
+            .content[data-v-13f786b3] {
+                padding-bottom: 20px
+            }
+        }
+        
+        .right[data-v-13f786b3] {
+            position: relative;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-grid-column: 3;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+            padding-left: 20px
+        }
+        
+        @media(max-width:768px) {
+            .right[data-v-13f786b3] {
+                display: none
+            }
+        }
+        
+        .right iframe[data-v-13f786b3] {
+            position: absolute;
+            left: 65px;
+            top: 108px;
+            box-sizing: border-box;
+            max-width: 498px;
+            max-height: 360px;
+            border-radius: 25px
+        }
+        
+        @media(max-width:1280px) {
+            .right iframe[data-v-13f786b3] {
+                left: 50%;
+                transform: translateX(-52%);
+                top: 76px;
+                max-width: 336px;
+                max-height: 245px
+            }
+        }
+        
+        .right[data-v-13f786b3] img {
+            max-width: 641px;
+            height: auto
+        }
+        
+        @media(max-width:1280px) {
+            .right[data-v-13f786b3] img {
+                max-width: 441px
+            }
+        }
+        
+        .mobile-image[data-v-13f786b3] {
+            position: relative;
+            display: none
+        }
+        
+        @media(max-width:768px) {
+            .mobile-image[data-v-13f786b3] {
+                display: block;
+                width: 100%;
+                margin-top: 28px;
+                margin-bottom: 35px
+            }
+        }
+        
+        .mobile-image .wrap[data-v-13f786b3] {
+            box-sizing: border-box;
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            height: 100%;
+            max-width: 92%;
+            max-height: 65%;
+            padding-right: 15%
+        }
+        
+        .mobile-image .wrap iframe[data-v-13f786b3] {
+            border-radius: 25px
+        }
+        
+        .mobile-image[data-v-13f786b3] img {
+            max-width: 100%
+        }
+        
+        .left[data-v-13f786b3] {
+            display: block;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -ms-flex-align: start;
+            align-items: flex-start;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -ms-grid-column: 1;
+            -ms-grid-row-span: 1
+        }
+        
+        @media(min-width:1500px) {
+            .left[data-v-13f786b3] {
+                padding-top: 62px;
+                padding-bottom: 62px
+            }
+        }
+        
+        @supports(display:grid) {
+            .left[data-v-13f786b3] {
+                display: -ms-flexbox;
+                display: flex
+            }
+        }
+        
+        @media(max-width:1000px) {
+            .left[data-v-13f786b3] {
+                max-width: 400px;
+                padding-top: 20px;
+                padding-bottom: 20px
+            }
+        }
+        
+        .button[data-v-13f786b3] {
+            padding: 15px 50px;
+            font-size: 15px
+        }
+        
+        @media(max-width:768px) {
+            .button[data-v-13f786b3] {
+                margin: 0 auto
+            }
+        }
+        
+        .hashtags[data-v-13f786b3] {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center
+        }
+        
+        @media(max-width:1280px) {
+            .hashtags[data-v-13f786b3] {
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap
+            }
+        }
+        
+        .hashtag[data-v-13f786b3] {
+            padding: 5px 15px;
+            background: #e8eaf6;
+            border-radius: 40px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 140%;
+            color: #362f8a;
+            margin-bottom: 10px
+        }
+        
+        .hashtag[data-v-13f786b3]:not(:last-child) {
+            margin-right: 10px
+        }
+        
+        .list[data-v-13f786b3] {
+            margin: 20px 0 35px;
+            padding: 0;
+            list-style: none
+        }
+        
+        .list li[data-v-13f786b3] {
+            position: relative;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 140%;
+            color: #1e1d29;
+            padding-left: 18px
+        }
+        
+        .list li[data-v-13f786b3]:not(:last-child) {
+            margin-bottom: 10px
+        }
+        
+        .list li[data-v-13f786b3]:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 8px;
+            height: 8px;
+            background: #362f8a;
+            border-radius: 100%
+        }
+        
+        .container[data-v-4896eaf2] {
+            max-width: 1292px;
+            margin: 0 auto;
+            padding-right: 15px;
+            padding-left: 15px
+        }
+        
+        @media(max-width:768px) {
+            .container[data-v-4896eaf2] {
+                max-width: 100vw;
+                box-sizing: border-box
+            }
+        }
+        
+        .header[data-v-4896eaf2] {
+            padding-top: 24px;
+            padding-bottom: 32px
+        }
+        
+        @media(max-width:768px) {
+            .header[data-v-4896eaf2] {
+                padding-top: 12px;
+                padding-bottom: 12px
+            }
+        }
+        
+        .container[data-v-4896eaf2] {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-pack: justify;
+            justify-content: space-between
+        }
+        
+        @media(max-width:768px) {
+            .container[data-v-4896eaf2] {
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap
+            }
+        }
+        
+        .menu[data-v-4896eaf2] {
+            animation: opacity-in-data-v-4896eaf2 .3s linear
+        }
+        
+        @media(max-width:768px) {
+            .menu[data-v-4896eaf2] {
+                width: 100%;
+                height: 0;
+                opacity: 0;
+                pointer-events: none;
+                transition: all 1s linear
+            }
+        }
+        
+        .is-open[data-v-4896eaf2] {
+            pointer-events: all;
+            height: auto;
+            opacity: 1;
+            animation: opacity-in-data-v-4896eaf2 .3s linear
+        }
+        
+        .is-open-enter-active[data-v-4896eaf2] {
+            animation: opacity-in-data-v-4896eaf2 .2s
+        }
+        
+        .is-open-leave-active[data-v-4896eaf2] {
+            animation: opacity-in-data-v-4896eaf2 .2s reverse
+        }
+        
+        @media(max-width:768px) {
+            .is-open[data-v-4896eaf2] {
+                display: block;
+                opacity: 1;
+                animation: opacity-in-data-v-4896eaf2 1s linear
+            }
+        }
+        
+        .hamburger[data-v-4896eaf2] {
+            display: none;
+            width: 28px;
+            height: 34px;
+            background: url(/images/burger-menu.svg) 50% no-repeat;
+            background-size: 100%;
+            border: 0;
+            cursor: pointer
+        }
+        
+        @media(max-width:768px) {
+            .hamburger[data-v-4896eaf2] {
+                display: inline-block
+            }
+        }
+        
+        .logo[data-v-4896eaf2] img {
+            max-width: 100%
+        }
+        
+        @media(max-width:768px) {
+            .logo[data-v-4896eaf2] {
+                max-width: 128px
+            }
+        }
+        
+        @keyframes opacity-in-data-v-4896eaf2 {
+            0% {
+                display: block;
+                opacity: 0
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        .menu[data-v-c0937c76] {
+            margin: 0;
+            padding: 0;
+            display: -ms-flexbox;
+            display: flex;
+            list-style: none
+        }
+        
+        @media(max-width:768px) {
+            .menu[data-v-c0937c76] {
+                position: relative;
+                top: 12px;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                margin-right: -15px;
+                margin-left: -15px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 15px;
+                background: #e8eaf6
+            }
+        }
+        
+        .item+.item[data-v-c0937c76] {
+            margin-left: 40px
+        }
+        
+        @media(max-width:768px) {
+            .item+.item[data-v-c0937c76] {
+                margin-top: 10px;
+                margin-left: 0
+            }
+        }
+        
+        .link[data-v-c0937c76] {
+            color: #362f8a;
+            font-weight: 700;
+            font-size: 23px;
+            text-decoration: none
+        }
+        
+        .link.nuxt-link-active[data-v-c0937c76] {
+            color: #f68e1e
+        }
+        
+        .btn[data-v-f7c29ca2] {
+            position: relative;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            padding: 15px 35px 17px;
+            background: #ed701b;
+            border-radius: 10px;
+            border: none;
+            margin-bottom: 80px;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 140%;
+            color: #fff;
+            overflow: hidden
+        }
+        
+        @media(max-width:768px) {
+            .btn[data-v-f7c29ca2] {
+                margin-bottom: 20px
+            }
+        }
+        
+        .btn span[data-v-f7c29ca2] {
+            position: relative;
+            z-index: 3
+        }
+        
+        .btn[data-v-f7c29ca2]:before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            z-index: 1;
+            background: #f68e1e;
+            pointer-events: none;
+            width: 97%;
+            height: 90%;
+            border-radius: 0 0 10px 10px;
+            transition: all .3s ease-out
+        }
+        
+        .btn[data-v-f7c29ca2]:focus:before,
+        .btn[data-v-f7c29ca2]:hover:before {
+            width: 100%;
+            height: 100%;
+            opacity: 0
+        }
+        
+        .dark[data-v-f7c29ca2] {
+            background: #171568
+        }
+        
+        .dark[data-v-f7c29ca2]:before {
+            background: #362f8a
+        }
+        
+        .white[data-v-f7c29ca2] {
+            color: #362f8a;
+            background: #e8eaf6
+        }
+        
+        .white[data-v-f7c29ca2]:before {
+            background: #fff
+        }
+        
+        .loader[data-v-f7c29ca2] {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            border: 2px solid #171568;
+            border-right-color: transparent;
+            border-radius: 50%;
+            animation: loader-data-v-f7c29ca2 .4s linear infinite
+        }
+        
+        @keyframes loader-data-v-f7c29ca2 {
+            0% {
+                transform: rotate(0)
+            }
+            to {
+                transform: rotate(1turn)
+            }
+        }
+        
+        .container[data-v-6f2f211a] {
+            max-width: 1292px;
+            margin: 0 auto;
+            padding-right: 15px;
+            padding-left: 15px
+        }
+        
+        @media(max-width:768px) {
+            .container[data-v-6f2f211a] {
+                max-width: 100vw;
+                box-sizing: border-box
+            }
+        }
+        
+        .quote[data-v-6f2f211a] {
+            background: #362f8a
+        }
+        
+        .content[data-v-6f2f211a] {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -ms-flex-pack: center;
+            justify-content: center;
+            font-family: Cabin, sans-serif;
+            color: #fff;
+            font-weight: 700;
+            font-size: 20px;
+            vertical-align: middle;
+            max-width: 648px
+        }
+        
+        @media(max-width:768px) {
+            .content[data-v-6f2f211a] {
+                position: static;
+                text-align: center
+            }
+        }
+        
+        .content[data-v-6f2f211a]:before {
+            position: absolute;
+            top: 0;
+            left: 11px;
+            width: 52px;
+            height: 36px;
+            margin-top: -12px;
+            background: url(/images/quote.svg) 50% no-repeat;
+            background-size: 100%;
+            content: ""
+        }
+        
+        @media(max-width:768px) {
+            .content[data-v-6f2f211a]:before {
+                top: 0;
+                left: 15px;
+                width: 48px;
+                height: 35px
+            }
+        }
+        
+        .content[data-v-6f2f211a]:after {
+            position: absolute;
+            right: 13px;
+            bottom: -15px;
+            width: 52px;
+            height: 36px;
+            margin-top: -22px;
+            background: url(/images/quote.svg) 50% no-repeat;
+            background-size: 100%;
+            content: ""
+        }
+        
+        @media(max-width:768px) {
+            .content[data-v-6f2f211a]:after {
+                right: 15px;
+                bottom: -18px;
+                width: 48px;
+                height: 35px
+            }
+        }
+        
+        .container[data-v-6f2f211a] {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: stretch;
+            align-items: stretch;
+            max-width: 969px;
+            position: relative;
+            box-sizing: border-box;
+            padding-left: 102px
+        }
+        
+        @media(max-width:768px) {
+            .container[data-v-6f2f211a] {
+                position: relative;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -ms-flex-align: center;
+                align-items: center;
+                padding: 40px 20px 60px
+            }
+        }
+        
+        .image[data-v-6f2f211a] {
+            background: #f68e1e;
+            margin-top: 30px;
+            margin-right: 23px;
+            margin-bottom: 32px;
+            border-radius: 50%;
+            padding: 3.97px
+        }
+        
+        .image[data-v-6f2f211a] img {
+            max-width: 143.19px;
+            display: block;
+            position: relative;
+            left: 4.84px;
+            bottom: 3.96px;
+            border-radius: 50%
+        }
+        
+        @media(max-width:768px) {
+            .image[data-v-6f2f211a] {
+                margin-top: 0;
+                margin-right: 0;
+                margin-bottom: 40px
+            }
+        }
+        
+        .source[data-v-6f2f211a] {
+            margin-top: 27px;
+            color: #f68e1e;
+            font-weight: 400;
+            font-size: 14px;
+            font-family: Cabin, sans-serif
+        }
+        
+        @media(max-width:768px) {
+            .source[data-v-6f2f211a] {
+                text-align: center
+            }
+        }
+        
+        .source a[data-v-6f2f211a] {
+            color: #f68e1e;
+            text-decoration: none
+        }
+        
+        .source a[data-v-6f2f211a]:hover {
+            text-decoration: underline
+        }
+        
+        .container[data-v-211b353a] {
+            max-width: 1292px;
+            margin: 0 auto;
+            padding-right: 15px;
+            padding-left: 15px
+        }
+        
+        @media(max-width:768px) {
+            .container[data-v-211b353a] {
+                max-width: 100vw;
+                box-sizing: border-box
+            }
+        }
+        
+        .headline[data-v-211b353a] {
+            margin-top: 0;
+            margin-bottom: 30px;
+            color: #362f8a;
+            font-weight: 700;
+            font-size: 49px;
+            text-align: center
+        }
+        
+        @media(max-width:768px) {
+            .headline[data-v-211b353a] {
+                margin-bottom: 20px
+            }
+        }
+        
+        .item-list[data-v-211b353a] {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -ms-flex-pack: justify;
+            justify-content: space-between
+        }
+        
+        @media(min-width:768px) {
+            .item-list[data-v-211b353a] {
+                grid-gap: 20px;
+                gap: 20px
+            }
+        }
+        
+        .container[data-v-211b353a] {
+            max-width: 1286px;
+            padding-top: 70px;
+            padding-bottom: 70px
+        }
+        
+        @media(max-width:768px) {
+            .container[data-v-211b353a] {
+                padding-top: 30px;
+                padding-bottom: 30px
+            }
+        }
+        
+        @media(max-width:480px) {
+            .container[data-v-211b353a] {
+                padding-top: 30px;
+                padding-bottom: 30px
+            }
+        }
+        
+        .item[data-v-211b353a] {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+            width: 49%;
+            margin: 45px auto
+        }
+        
+        @media(max-width:768px) {
+            .item[data-v-211b353a] {
+                -ms-flex-direction: column;
+                flex-direction: column;
+                margin-bottom: 0;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #362f8a;
+                width: 100%
+            }
+        }
+        
+        @media(max-width:768px) {
+            .item[data-v-211b353a],
+            .item[data-v-211b353a]:first-child {
+                margin-top: 0
+            }
+        }
+        
+        .item[data-v-211b353a]:last-child {
+            -ms-flex-item-align: center;
+            align-self: center;
+            margin: 0 auto
+        }
+        
+        @media(max-width:768px) {
+            .item[data-v-211b353a]:last-child {
+                border-bottom: 0
+            }
+        }
+        
+        @media(max-width:480px) {
+            .item[data-v-211b353a]:last-child {
+                padding-bottom: 10px
+            }
+        }
+        
+        .text[data-v-211b353a] {
+            max-width: 477px;
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 150%;
+            text-align: left;
+            opacity: .9;
+            color: #1e1d29
+        }
+        
+        .text[data-v-211b353a] em {
+            font-size: 22px;
+            font-style: normal;
+            color: #362f8a
+        }
+        
+        .text-wrapper[data-v-211b353a] {
+            margin: 0;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+            text-align: left;
+            width: 54%
+        }
+        
+        @media(max-width:768px) {
+            .text-wrapper[data-v-211b353a] {
+                -ms-flex-pack: center;
+                justify-content: center;
+                width: auto
+            }
+        }
+        
+        .item:nth-child(odd) .text-wrapper[data-v-211b353a] {
+            -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse
+        }
+        
+        @media(max-width:768px) {
+            .item:nth-child(odd) .text-wrapper[data-v-211b353a] {
+                -ms-flex-direction: row;
+                flex-direction: row
+            }
+        }
+        
+        .buttons[data-v-211b353a] {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: center;
+            justify-content: center
+        }
+        
+        .image[data-v-211b353a] {
+            max-width: 244px;
+            margin-right: 52px
+        }
+        
+        @media(max-width:768px) {
+            .image[data-v-211b353a] {
+                margin-right: 0
+            }
+        }
+        
+        .image[data-v-211b353a] img {
+            max-width: 100%;
+            width: 210px
+        }
+        
+        @media(max-width:768px) {
+            .image[data-v-211b353a] img {
+                max-width: 100%;
+                margin-bottom: 10px
+            }
+        }
+        
+        .gift[data-v-01423aec] {
+            padding-top: 80px;
+            padding-bottom: 80px;
+            background: #f68e1e url(/images/celebrating-bg.png) 50% no-repeat
+        }
+        
+        @media(max-width:768px) {
+            .gift[data-v-01423aec] {
+                padding-bottom: 40px;
+                background-image: url(/images/celebrating-bg_small.svg);
+                background-position: left calc(50% + 55px) top -400px;
+                background-size: 1200px
+            }
+        }
+        
+        @media(max-width:480px) {
+            .gift[data-v-01423aec] {
+                background-position: left calc(50% + 55px) top -135px;
+                background-size: auto
+            }
+        }
+        
+        .title[data-v-01423aec] {
+            margin-bottom: 18px;
+            color: #fff;
+            font-weight: 700;
+            font-size: 49px;
+            text-align: center;
+            line-height: 1.3
+        }
+        
+        @media(max-width:768px) {
+            .title[data-v-01423aec] {
+                font-size: 30px
+            }
+        }
+        
+        .subtitle[data-v-01423aec] {
+            color: #fff;
+            font-weight: 700;
+            font-size: 19px;
+            line-height: 1.3
+        }
+        
+        .link[data-v-01423aec],
+        .subtitle[data-v-01423aec] {
+            text-align: center
+        }
+        
+        .link[data-v-01423aec] {
+            margin-top: 14px;
+            margin-bottom: 34px;
+            font-family: Cabin, sans-serif
+        }
+        
+        .link[data-v-01423aec] a {
+            display: inline-block;
+            padding-bottom: 2px;
+            color: #362f8a;
+            text-decoration: none;
+            border-bottom: 1px solid #362f8a
+        }
+        
+        .buttons[data-v-01423aec] {
+            text-align: center;
+            margin-top: 40px
+        }
+        
+        .buttons .gift-btn[data-v-01423aec] {
+            margin-bottom: 0
+        }
+        
+        .content[data-v-01423aec] {
+            max-width: 811px;
+            margin: 0 auto
+        }
+        
+        @media(max-width:768px) {
+            .content[data-v-01423aec] {
+                padding-right: 15px;
+                padding-left: 15px
+            }
+        }
+        
+        @media(max-width:480px) {
+            .content[data-v-01423aec] {
+                max-width: 379px;
+                margin: 0 auto
+            }
+        }
+        
+        .container[data-v-37f6683d] {
+            max-width: 1292px;
+            margin: 0 auto;
+            padding-right: 15px;
+            padding-left: 15px
+        }
+        
+        @media(max-width:768px) {
+            .container[data-v-37f6683d] {
+                max-width: 100vw;
+                box-sizing: border-box
+            }
+        }
+        
+        .title[data-v-37f6683d] {
+            margin-top: 0;
+            margin-bottom: 89px;
+            color: #362f8a;
+            font-size: 49px;
+            text-align: center
+        }
+        
+        @media(max-width:768px) {
+            .title[data-v-37f6683d] {
+                margin-bottom: 40px;
+                font-size: 32px
+            }
+        }
+        
+        @media(max-width:480px) {
+            .title[data-v-37f6683d] {
+                margin-top: 0
+            }
+        }
+        
+        .companies[data-v-37f6683d] {
+            padding-top: 80px;
+            padding-bottom: 80px;
+            background: linear-gradient(130.15deg, #f5f5f9 27.12%, #fff9f4 93.22%)
+        }
+        
+        @media(max-width:768px) {
+            .companies[data-v-37f6683d] {
+                padding-top: 60px;
+                padding-bottom: 40px
+            }
+        }
+        
+        .company[data-v-37f6683d] {
+            max-width: 420px
+        }
+        
+        @media(max-width:1100px) {
+            .company[data-v-37f6683d] {
+                max-width: 400px;
+                margin-right: auto;
+                margin-left: auto;
+                padding-right: 35px;
+                padding-left: 35px;
+                text-align: center
+            }
+        }
+        
+        @media(max-width:480px) {
+            .company[data-v-37f6683d] {
+                padding: 35px;
+                background: linear-gradient(130.15deg, #f5f5f9 27.12%, #fff9f4 93.22%);
+                box-shadow: 0 16px 24px rgba(54, 47, 138, .1), 0 2px 6px rgba(54, 47, 138, .08), 0 0 1px rgba(0, 0, 0, .04);
+                border-radius: 20px
+            }
+        }
+        
+        .company[data-v-37f6683d]:first-child {
+            -ms-grid-column: 1
+        }
+        
+        .company[data-v-37f6683d]:last-child {
+            -ms-grid-column: 3;
+            max-width: 498px
+        }
+        
+        @media(max-width:768px) {
+            .company[data-v-37f6683d] img {
+                max-width: 100%
+            }
+        }
+        
+        .company:last-child .description[data-v-37f6683d] {
+            margin-top: 20px
+        }
+        
+        .description[data-v-37f6683d] {
+            margin-top: 27px;
+            font-weight: 400;
+            font-size: 20px;
+            font-family: Cabin, sans-serif
+        }
+        
+        .description a[data-v-37f6683d] {
+            text-decoration: none
+        }
+        
+        @media(max-width:480px) {
+            .description[data-v-37f6683d] {
+                margin-top: 20px
+            }
+        }
+        
+        .powered[data-v-37f6683d] {
+            margin-top: 62px;
+            font-size: 20px;
+            font-family: Cabin, sans-serif;
+            text-align: center
+        }
+        
+        @media(max-width:768px) {
+            .powered[data-v-37f6683d] {
+                margin-top: 40px
+            }
+        }
+        
+        .powered[data-v-37f6683d] img {
+            margin-left: 19px;
+            vertical-align: middle
+        }
+        
+        @media(max-width:768px) {
+            .powered[data-v-37f6683d] img {
+                display: block;
+                margin-top: 20px;
+                margin-right: auto;
+                margin-left: auto
+            }
+        }
+        
+        .content[data-v-37f6683d] {
+            display: -ms-grid;
+            display: grid;
+            grid-gap: 80px;
+            grid-template-columns: 412px 475px;
+            -ms-grid-columns: 1fr 81px 1fr;
+            max-width: 867px;
+            margin: 0 auto
+        }
+        
+        @media(max-width:1100px) {
+            .content[data-v-37f6683d] {
+                grid-gap: 40px;
+                grid-template-columns: 1fr
+            }
+        }
+        
+        @media(max-width:768px) {
+            .content[data-v-37f6683d] {
+                grid-gap: 20px
+            }
+        }
+        
+        .follow-networks .container[data-v-2e1e5251] {
+            max-width: 1292px;
+            margin: 0 auto;
+            padding-right: 15px;
+            padding-left: 15px
+        }
+        
+        @media(max-width:768px) {
+            .follow-networks .container[data-v-2e1e5251] {
+                max-width: 100vw;
+                box-sizing: border-box
+            }
+        }
+        
+        .follow-networks .title[data-v-2e1e5251] {
+            margin: 40px 0;
+            color: #362f8a;
+            font-size: 49px;
+            text-align: center
+        }
+        
+        @media(max-width:768px) {
+            .follow-networks .title[data-v-2e1e5251] {
+                margin-bottom: 40px;
+                font-size: 32px
+            }
+        }
+        
+        @media(max-width:480px) {
+            .follow-networks .title[data-v-2e1e5251] {
+                margin-top: 20px
+            }
+        }
+        
+        .follow-networks .container[data-v-2e1e5251] {
+            padding-top: 80px;
+            border-bottom: 1px solid #362f8a
+        }
+        
+        @media(max-width:768px) {
+            .follow-networks .container[data-v-2e1e5251] {
+                padding-top: 40px
+            }
+        }
+        
+        @media(max-width:400px) {
+            .follow-networks .container[data-v-2e1e5251] {
+                margin: 0 20px
+            }
+        }
+        
+        .follow-networks__image[data-v-2e1e5251] {
+            text-align: center
+        }
+        
+        .follow-networks__list[data-v-2e1e5251] {
+            list-style: none;
+            margin: 0;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            padding: 0 0 40px
+        }
+        
+        .follow-networks__list li[data-v-2e1e5251] {
+            margin: 0 10px
+        }
+        
+        .container[data-v-1d7d6202] {
+            max-width: 1292px;
+            margin: 0 auto;
+            padding-right: 15px;
+            padding-left: 15px
+        }
+        
+        @media(max-width:768px) {
+            .container[data-v-1d7d6202] {
+                max-width: 100vw;
+                box-sizing: border-box
+            }
+        }
+        
+        .activity[data-v-1d7d6202] {
+            padding-top: 80px;
+            padding-bottom: 120px
+        }
+        
+        @media(max-width:480px) {
+            .activity[data-v-1d7d6202] {
+                padding-top: 60px;
+                padding-bottom: 60px
+            }
+        }
+        
+        .container[data-v-1d7d6202] {
+            display: -ms-grid;
+            display: grid;
+            grid-gap: 82px;
+            grid-template-columns: 1fr 1fr;
+            -ms-grid-columns: 1fr 82px 1fr;
+            max-width: 908px
+        }
+        
+        @media(max-width:768px) {
+            .container[data-v-1d7d6202] {
+                grid-template-columns: 1fr;
+                max-width: 400px
+            }
+        }
+        
+        @media(max-width:480px) {
+            .container[data-v-1d7d6202] {
+                grid-gap: 60px
+            }
+        }
+        
+        .title[data-v-1d7d6202] {
+            margin-top: 0;
+            margin-bottom: 60px;
+            color: #362f8a;
+            font-size: 29px
+        }
+        
+        @media(max-width:480px) {
+            .title[data-v-1d7d6202] {
+                margin-bottom: 40px
+            }
+        }
+        
+        .post[data-v-1d7d6202] {
+            margin-bottom: 40px
+        }
+        
+        .post[data-v-1d7d6202]:last-child {
+            margin-bottom: 0
+        }
+        
+        .post .twitter[data-v-1d7d6202] iframe {
+            height: 100%
+        }
+        
+        .left[data-v-1d7d6202] {
+            -ms-grid-column: 1
+        }
+        
+        .right[data-v-1d7d6202] {
+            -ms-grid-column: 3
+        }
+        
+        .post-preview[data-v-e22ae37a] {
+            position: relative;
+            font-family: Cabin, sans-serif
+        }
+        
+        .image-wrapper[data-v-e22ae37a] {
+            margin-bottom: 20px
+        }
+        
+        .image[data-v-e22ae37a] {
+            width: 100%;
+            padding-bottom: 44%;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            background-size: 100% auto;
+            border-radius: 16px
+        }
+        
+        .author[data-v-e22ae37a] {
+            margin-bottom: 10px;
+            color: #362f8a;
+            font-size: 12px
+        }
+        
+        .title[data-v-e22ae37a] {
+            margin-bottom: 4px;
+            color: #362f8a;
+            font-weight: 700;
+            font-size: 23px
+        }
+        
+        .text[data-v-e22ae37a] {
+            margin-bottom: 10px;
+            font-size: 14px
+        }
+        
+        .date[data-v-e22ae37a],
+        .text[data-v-e22ae37a] {
+            color: #1e1d29
+        }
+        
+        .date[data-v-e22ae37a] {
+            font-size: 12px
+        }
+        
+        .link[data-v-e22ae37a] {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0
+        }
+        
+        .container[data-v-3df329ee] {
+            max-width: 1292px;
+            margin: 0 auto;
+            padding-right: 15px;
+            padding-left: 15px
+        }
+        
+        @media(max-width:768px) {
+            .container[data-v-3df329ee] {
+                max-width: 100vw;
+                box-sizing: border-box
+            }
+        }
+        
+        .Cookie--base[data-v-3df329ee] {
+            background: #f68e1e
+        }
+        
+        @media(max-width:768px) {
+            .Cookie--base[data-v-3df329ee] {
+                padding-top: 5px;
+                padding-bottom: 5px
+            }
+        }
+        
+        .cookie-law__content[data-v-3df329ee] {
+            max-width: 914px;
+            display: -ms-flexbox;
+            display: flex;
+            color: #fff;
+            margin: 0 auto;
+            -ms-flex-align: start;
+            align-items: flex-start
+        }
+        
+        @media(max-width:768px) {
+            .cookie-law__content[data-v-3df329ee] {
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -ms-flex-align: center;
+                align-items: center
+            }
+        }
+        
+        .cookie-law__text[data-v-3df329ee] {
+            font-size: 14px;
+            margin-right: 32px;
+            font-weight: 400
+        }
+        
+        @media(max-width:768px) {
+            .cookie-law__text[data-v-3df329ee] {
+                margin-right: 0;
+                margin-bottom: 5px
+            }
+        }
+        
+        .cookie-law[data-v-3df329ee] {
+            width: 100%
+        }
+        
+        .cookie-law .btn[data-v-3df329ee] {
+            min-width: 200px;
+            margin-bottom: 0
+        }
+        
+        .cookie-law__close[data-v-3df329ee] {
+            cursor: pointer;
+            position: absolute;
+            top: 15px;
+            right: 15px
+        }
+        
+        @media(max-width:768px) {
+            .cookie-law__close[data-v-3df329ee] {
+                top: 5px;
+                right: 5px
+            }
+        }
+        
+        .container[data-v-3df329ee] {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-pack: justify;
+            justify-content: space-between
+        }
+        
+        @media(max-width:768px) {
+            .container[data-v-3df329ee] {
+                -ms-flex-direction: column;
+                flex-direction: column
+            }
+        }
+        
+        .footer[data-v-3df329ee] {
+            display: block;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background: #e8eaf6
+        }
+        
+        @media(max-width:768px) {
+            .footer[data-v-3df329ee] {
+                padding-top: 20px;
+                padding-bottom: 20px
+            }
+        }
+        
+        @media(max-width:768px) {
+            .logo[data-v-3df329ee] {
+                margin-bottom: 20px
+            }
+        }
+        
+        .copy[data-v-3df329ee] {
+            max-width: 170px;
+            color: #362f8a;
+            font-size: 12px;
+            font-family: Cabin, sans-serif;
+            text-align: right
+        }
+        
+        @media(max-width:768px) {
+            .copy[data-v-3df329ee] {
+                text-align: center
+            }
+        }
+        
+        .vendor[data-v-3df329ee],
+        .year[data-v-3df329ee] {
+            margin-bottom: 14px
+        }
+        
+        .vendor[data-v-3df329ee] {
+            line-height: 150%
+        }
+        
+        .terms[data-v-3df329ee] a {
+            color: #f68e1e
+        }
+        
+        @media(max-width:768px) {
+            .social[data-v-3df329ee] {
+                margin-bottom: 20px
+            }
+        }
+        
+        .social-link[data-v-3df329ee] {
+            margin-right: 15px;
+            margin-left: 15px
+        }
+        
+        @media(max-width:768px) {
+            .subscribe[data-v-3df329ee] {
+                margin-bottom: 20px
+            }
+        }
+        
+        .social-link[data-v-5146f7ab] {
+            display: inline-block;
+            width: 21px;
+            height: 21px;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            background-size: 100%
+        }
+        
+        .facebook[data-v-5146f7ab] {
+            background-image: url(/images/facebook-icon.svg)
+        }
+        
+        .linkedin[data-v-5146f7ab] {
+            background-image: url(/images/linkedin-icon.svg)
+        }
+        
+        .youtube[data-v-5146f7ab] {
+            background-image: url(/images/youtube-icon.svg)
+        }
+        
+        .github[data-v-5146f7ab] {
+            background-image: url(/images/github-icon.svg)
+        }
+        
+        .twitter[data-v-5146f7ab] {
+            background-image: url(/images/twitter-icon.svg)
+        }
+    </style>
+    <link rel="preload" href="/_nuxt/static/1635165242/state.js" as="script">
+    <link rel="preload" href="/_nuxt/static/1635165242/payload.js" as="script">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVDLXMP" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div data-server-rendered="true" id="__nuxt">
+        <!---->
+        <div id="__layout">
+            <div class="app" data-v-13f786b3>
+                <div class="first-screen" data-v-13f786b3>
+                    <header class="header" data-v-4896eaf2 data-v-13f786b3>
+                        <div class="container" data-v-4896eaf2>
+                            <div class="logo" data-v-4896eaf2>
+                                <a href="/" aria-current="page" class="nuxt-link-exact-active nuxt-link-active" data-v-4896eaf2><img src="/images/logo.svg" width="224" height="57" alt="logo" data-v-4896eaf2></a>
+                            </div> <button class="hamburger" data-v-4896eaf2></button>
+                            <div class="menu" data-v-4896eaf2>
+                                <nav data-v-c0937c76 data-v-4896eaf2>
+                                    <ul class="menu" data-v-c0937c76>
+                                        <li class="item" data-v-c0937c76><a href="/get/" class="link" data-v-c0937c76>Get</a></li>
+                                        <li class="item" data-v-c0937c76><a href="/blog/" class="link" data-v-c0937c76>Blog</a></li>
+                                        <li class="item" data-v-c0937c76><a href="/contacts/" class="link" data-v-c0937c76>Contact us</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="content" data-v-13f786b3>
+                        <div class="left" data-v-13f786b3>
+                            <h1 class="headline" data-v-13f786b3>
+                                The most advanced IntelliJ plugin for managing your JPA data model and beyond
+                            </h1>
+                            <div class="mobile-image" data-v-13f786b3>
+                                <div class="wrap" data-v-13f786b3><iframe width="100%" height="100%" src="https://www.youtube.com/embed/yVssVSmkP0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen data-v-13f786b3></iframe></div> <img src="/images/tv-main-page.svg" alt data-v-13f786b3>
+                            </div>
+                            <ul class="hashtags" data-v-13f786b3>
+                                <li class="hashtag" data-v-13f786b3>Hibernate</li>
+                                <li class="hashtag" data-v-13f786b3>EclipseLink</li>
+                                <li class="hashtag" data-v-13f786b3>SpringData</li>
+                                <li class="hashtag" data-v-13f786b3>Liquibase</li>
+                                <li class="hashtag" data-v-13f786b3>Flyway</li>
+                            </ul>
+                            <ul class="list" data-v-13f786b3>
+                                <li data-v-13f786b3>Create JPA entities and data-related objects fast</li>
+                                <li data-v-13f786b3>Easily manage database migration</li>
+                                <li data-v-13f786b3>Make sure your code will not fail at runtime</li>
+                            </ul> <a href="/get/" class="btn button" data-v-f7c29ca2 data-v-13f786b3><span
+                                    data-v-f7c29ca2>Get JPA Buddy</span></a>
+                        </div>
+                        <div class="right" data-v-13f786b3><iframe width="100%" height="100%" src="https://www.youtube.com/embed/yVssVSmkP0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                                data-v-13f786b3></iframe> <img src="/images/tv-main-page.svg" alt data-v-13f786b3></div>
+                    </div>
+                </div>
+                <div data-v-13f786b3>
+                    <div class="quote" data-v-6f2f211a>
+                        <div class="container" data-v-6f2f211a>
+                            <div class="image" data-v-6f2f211a><img src="/images/quotes_eugenp.jpeg" alt="Vlad Mihalcea" data-v-6f2f211a></div>
+                            <div class="content" data-v-6f2f211a>
+                                JPA Buddy is a perfect tool for anyone working on data-centric applications. In fact, you can develop an entire CRUD application or a simple microservice by spending nearly zero time writing boilerplate code!
+                                <div class="source" data-v-6f2f211a>Eugen Paraschiv, the author of <a href="https://www.baeldung.com/" data-v-6f2f211a>baeldung.com</a>, most rated Spring and JPA expert, co-author of JPA Buddy</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-v-211b353a>
+                        <div class="container" data-v-211b353a>
+                            <h2 class="headline" data-v-211b353a>Features</h2>
+                            <div class="item-list" data-v-211b353a>
+                                <div class="item" data-v-211b353a>
+                                    <div class="image" data-v-211b353a><img src="/images/features_visual-designers.svg" alt="convenient visual designers icon"></div>
+                                    <div class="text-wrapper" data-v-211b353a>
+                                        <div class="text" data-v-211b353a><em>Use convenient visual designers</em> for promptly creating and editing JPA entities, Spring Data JPA repositories and manage database migration</div>
+                                    </div>
+                                </div>
+                                <div class="item" data-v-211b353a>
+                                    <div class="image" data-v-211b353a><img src="/images/features_utilize-jpa.svg" alt="Utilize a full set of JPA icon"></div>
+                                    <div class="text-wrapper" data-v-211b353a>
+                                        <div class="text" data-v-211b353a><em>Generate boilerplate and utility code</em> around JPA in a few clicks: indexes, validations, toString(), Hibernate types, JPA converters, equals()/hashCode()...</div>
+                                    </div>
+                                </div>
+                                <div class="item" data-v-211b353a>
+                                    <div class="image" data-v-211b353a><img src="/images/features_code-conventions.svg" alt="Define preferred code-conventions icon"></div>
+                                    <div class="text-wrapper" data-v-211b353a>
+                                        <div class="text" data-v-211b353a><em>Define preferred code-conventions</em> so that all project participants follow the same rules keeping source code clean and uniform</div>
+                                    </div>
+                                </div>
+                                <div class="item" data-v-211b353a>
+                                    <div class="image" data-v-211b353a><img src="/images/features_data-view.png" alt="Use data-centric view icon"></div>
+                                    <div class="text-wrapper" data-v-211b353a>
+                                        <div class="text" data-v-211b353a><em>Take a data-centric look at your
+                                                application.</em> Intuitively navigate across the data model and data-related objects. Visually drill it down and up</div>
+                                    </div>
+                                </div>
+                                <div class="item" data-v-211b353a>
+                                    <div class="image" data-v-211b353a><img src="/images/features_boost-productivity.svg" alt="Boost your productivity icon"></div>
+                                    <div class="text-wrapper" data-v-211b353a>
+                                        <div class="text" data-v-211b353a><em>Minimize time on debugging</em> and searching through the documentation by following specialized inspections and smart quick fixes</div>
+                                    </div>
+                                </div>
+                                <div class="item" data-v-211b353a>
+                                    <div class="image" data-v-211b353a><img src="/images/features_liquibase.svg" alt="Easily generate Liquibase migration scripts icon"></div>
+                                    <div class="text-wrapper" data-v-211b353a>
+                                        <div class="text" data-v-211b353a><em>Click a few buttons to generate Liquibase
+                                                changelogs or Flyway migrations</em> directly comparing your data model with a reference database. Smart system of script generation ensures safe database migration</div>
+                                    </div>
+                                </div>
+                                <div class="item" data-v-211b353a>
+                                    <div class="image" data-v-211b353a><img src="/images/features_special-support.svg" alt="Benefit from specialized support icon"></div>
+                                    <div class="text-wrapper" data-v-211b353a>
+                                        <div class="text" data-v-211b353a><em>Specify your custom types mapping for
+                                                update scripts</em> generation and create truly cross-database migration scripts
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" data-v-211b353a>
+                                    <div class="image" data-v-211b353a><img src="/images/features_special-smart.svg" alt="Target search icon"></div>
+                                    <div class="text-wrapper" data-v-211b353a>
+                                        <div class="text" data-v-211b353a><em>Follow smart inspections</em> to make sure you use JPA right and your code will not fail at runtime</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gift" data-v-01423aec>
+                        <div class="content" data-v-01423aec>
+                            <div class="title" data-v-01423aec>
+                                Get JPA Buddy now and share your thoughts
+                            </div>
+                            <div class="subtitle" data-v-01423aec>
+                                The team behind JPA Buddy highly appreciates any feedback and ideas, as it helps us to further improve JPA Buddy. It is a FREE IntelliJ plugin, so give it a try and share your thoughts!
+                            </div>
+                            <div class="buttons" data-v-01423aec><a href="/get/" class="btn gift-btn white" data-v-f7c29ca2 data-v-01423aec><span data-v-f7c29ca2>Get JPA Buddy</span></a></div>
+                        </div>
+                    </div>
+                    <div class="companies" data-v-37f6683d>
+                        <div class="container" data-v-37f6683d>
+                            <h2 class="title" data-v-37f6683d>JPABuddy is a joint effort of:</h2>
+                            <div class="content" data-v-37f6683d>
+                                <div class="company" data-v-37f6683d><img src="/images/baeldung-logo.svg" alt="Baeldung logo" data-v-37f6683d>
+                                    <div class="description" data-v-37f6683d>
+                                        Eugen Paraschiv, the author of <a href="https://www.baeldung.com/" data-v-37f6683d>baeldung.com</a>, most rated Spring and JPA expert
+                                    </div>
+                                </div>
+                                <div class="company" data-v-37f6683d><img src="/images/haulmont-logo.svg" alt="Haulmont logo" data-v-37f6683d>
+                                    <div class="description" data-v-37f6683d>
+                                        Creators of CUBA Platform (now Jmix) - an open source framework and tools for enterprise software development
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="powered" data-v-37f6683d>
+                                Powered by the world's most popular Java IDE <img src="/images/intelij-idea-logo.svg" alt="inteliJ idea logo" data-v-37f6683d></div>
+                        </div>
+                    </div>
+                    <div class="follow-networks" data-v-2e1e5251>
+                        <div class="container" data-v-2e1e5251>
+                            <div class="follow-networks__image" data-v-2e1e5251><img src="/images/follow-network.svg" alt="Haulmont logo" data-v-2e1e5251></div>
+                            <h2 class="title" data-v-2e1e5251>Follow us on our social networks</h2>
+                            <ul class="follow-networks__list" data-v-2e1e5251>
+                                <li data-v-2e1e5251>
+                                    <a href="https://www.facebook.com/JPABuddy/" data-v-2e1e5251><img src="/images/network-facebook.svg" alt data-v-2e1e5251></a>
+                                </li>
+                                <li data-v-2e1e5251>
+                                    <a href="https://twitter.com/JPABuddy" data-v-2e1e5251><img src="/images/network-twitter.svg" alt data-v-2e1e5251></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="activity" data-v-1d7d6202>
+                        <div class="container" data-v-1d7d6202>
+                            <div class="left" data-v-1d7d6202>
+                                <h2 class="title" data-v-1d7d6202>Latest blog posts</h2>
+                                <div class="post-preview post" data-v-e22ae37a data-v-1d7d6202>
+                                    <div class="image-wrapper" data-v-e22ae37a>
+                                        <div class="image" style="background-image:url(/uploads/what_s_new_in_JPA_Buddy_5_ed6b377eec.png)" data-v-e22ae37a></div>
+                                    </div>
+                                    <div class="author" data-v-e22ae37a>Andrey Oganesyan</div>
+                                    <div class="title" data-v-e22ae37a>What’s new in JPA Buddy 5</div>
+                                    <div class="text" data-v-e22ae37a>JPA Buddy has learned some new tricks! Let’s take a look at what features were rolled out in the latest major release: reverse engineering, new entity designer capabilities, improved settings, more code generation tools
+                                        and other useful things.</div>
+                                    <div class="date" data-v-e22ae37a>October 21, 2021</div>
+                                    <a href="/blog/whats-new-in-jpa-buddy-5/" class="link" data-v-e22ae37a></a>
+                                </div>
+                                <div class="post-preview post" data-v-e22ae37a data-v-1d7d6202>
+                                    <div class="image-wrapper" data-v-e22ae37a>
+                                        <div class="image" style="background-image:url(/uploads/Soft_deletion_JPA_Buddy_9d4fcb40c4.png)" data-v-e22ae37a></div>
+                                    </div>
+                                    <div class="author" data-v-e22ae37a>Aleksey Stukalov</div>
+                                    <div class="title" data-v-e22ae37a>Soft Deletion in Hibernate: Things You May Miss
+                                    </div>
+                                    <div class="text" data-v-e22ae37a>In this article we will take a look into some details that stay uncovered by most of the articles about soft deletion implementation using Hibernate.</div>
+                                    <div class="date" data-v-e22ae37a>August 27, 2021</div>
+                                    <a href="/blog/soft-deletion-in-hibernate-things-you-may-miss/" class="link" data-v-e22ae37a></a>
+                                </div>
+                            </div>
+                            <div class="right" data-v-1d7d6202>
+                                <h2 class="title" data-v-1d7d6202>Twitter</h2>
+                                <!---->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer" data-v-3df329ee data-v-13f786b3>
+                    <div class="container" data-v-3df329ee>
+                        <div class="logo" data-v-3df329ee><img src="/images/mono-logo.svg" alt="logo" data-v-3df329ee>
+                        </div>
+                        <div class="social" data-v-3df329ee>
+                            <a href="https://www.facebook.com/JPABuddy/" target="_blank" class="social-link link facebook" data-v-5146f7ab data-v-3df329ee></a>
+                            <a href="https://twitter.com/JPABuddy" target="_blank" class="social-link link twitter" data-v-5146f7ab data-v-3df329ee></a>
+                            <a href="https://www.youtube.com/channel/UCalqCvoKlyT-V6I4EKQdV_w" target="_blank" class="social-link link youtube" data-v-5146f7ab data-v-3df329ee></a>
+                        </div>
+                        <div class="subscribe" data-v-3df329ee>
+                            <a href="https://discord.gg/DxRDQPk9rh" target="_blank" data-v-3df329ee><img width="150" src="/images/discord_button.png" alt="discord" data-v-3df329ee></a>
+                        </div>
+                        <div class="copy" data-v-3df329ee>
+                            <div class="year" data-v-3df329ee>2021 Copyright (c)</div>
+                            <div class="vendor" data-v-3df329ee>
+                                Developed and supported by Haulmont and Baeldung
+                            </div>
+                            <div class="terms" data-v-3df329ee><a href="/terms-of-use/" data-v-3df329ee>Terms of Use</a>
+                            </div>
+                        </div>
+                    </div>
+                    <cookie-law data-v-3df329ee></cookie-law>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script defer src="/_nuxt/static/1635165242/state.js"></script>
+    <script src="/_nuxt/75e234b.js" defer></script>
+    <script src="/_nuxt/4b7c7ea.js" defer></script>
+    <script src="/_nuxt/a458a15.js" defer></script>
+    <script src="/_nuxt/f2bd8ad.js" defer></script>
+    <script src="/_nuxt/7e74558.js" defer></script>
+</body>
+
+</html>
